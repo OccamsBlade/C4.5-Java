@@ -46,7 +46,7 @@ public class DecisionTree {
 	}
 
 	// Tests a set of instances, prints results
-	public double test(List<Instance> instances) {
+	public void test(List<Instance> instances) {
 		System.out.println("\n\nListed as: <predicted class> <actual class>");
 		int correct = 0;
 		for (Instance instance : instances) {
@@ -59,7 +59,6 @@ public class DecisionTree {
 		System.out.println("Total: " + instances.size());
 		double hitRate = (correct * 1.0) / (instances.size() * 1.0);
 		System.out.println("Hit Rate: " + (hitRate * 100) + "%");
-		return hitRate;
 	}
 	
 	// Classifies an instance (requires that a tree is already built)

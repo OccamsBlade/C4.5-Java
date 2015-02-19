@@ -1,0 +1,5 @@
+In bash command line, use
+
+./dt-learn <train-set-file> <test-set-file> m
+
+to run

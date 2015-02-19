@@ -2,9 +2,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 // Main class for decision tree learner
 public class DTLearner {
 	
@@ -35,17 +32,11 @@ public class DTLearner {
 	public static void main(String[] args) {
 		DataSet trainingSet = read(args[0]);
 		DataSet testingSet = read(args[1]);
-		int stopValue = 20;
+		int stopValue = Integer.parseInt(args[2]);
 		
-		
-
 		DecisionTree ID3 = new DecisionTree(stopValue);
 		ID3.train(trainingSet);
-		double accuracy = ID3.test(testingSet.instances);
-		System.out.println("\n\nm: " + stopValue);
-		System.out.println("Accuracy: " + accuracy);
-		
-
+		ID3.test(testingSet.instances);
 	}
 	
 }

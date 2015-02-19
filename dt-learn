@@ -1,0 +1,2 @@
+javac DTLearner.java
+java DTLearner $1 $2 $3
